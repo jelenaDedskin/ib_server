@@ -7,6 +7,30 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+/**
+ * @api {post} /consume/ Accumulate call data
+ * @apiName Consume
+ * @apiGroup User
+ *
+ * @apiParam {Number} callId Call unique ID.
+ * @apiParam {Number} price Calculated price.
+ *
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *       "data": "Call was successfully updated "
+ *     }
+ *
+ * @apiError UserNotFound The id of the User was not found.
+ *
+ * @apiErrorExample Error-Response:
+ *     {
+ *       "error": "Invalid request data"
+ *     }
+ */
 app.post('/consume', function (req, res) {
     var callId = req.body.callId;
     var price = req.body.price;
