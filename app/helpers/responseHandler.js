@@ -1,6 +1,5 @@
 module.exports = {
   successResponse: (res, msg) => {
-    console.log('ovd');
     res.send(JSON.stringify({
       data: msg,
       error: '',

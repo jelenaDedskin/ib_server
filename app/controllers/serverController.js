@@ -10,7 +10,6 @@ module.exports = {
     if (typeof callId === 'undefined' || typeof price === 'undefined') {
       responseHandler.errorResponse(res, 'Invalid request data');
     } else {
-      console.log('c');
       await db.updateCall(callId, price);
       responseHandler.successResponse(res, 'Call was updated');
     }

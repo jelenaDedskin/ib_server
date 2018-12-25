@@ -28,7 +28,6 @@ const router = express.Router();
  *     }
  */
 router.post('/consume', (req, res) => {
-  console.log('t');
   serverController.consume(req, res);
 });
 
