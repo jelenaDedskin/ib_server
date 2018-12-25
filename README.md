@@ -1,6 +1,6 @@
 # Overview
 
-IB Server accumulates data (call id and price) and updates DB entry for given call id.
+IB Server updates call's price for provided call id.
  
 # Requirements
 
@@ -9,32 +9,39 @@ IB Server accumulates data (call id and price) and updates DB entry for given ca
  
 # Installation
  - Clone this git repository
- - ***IB Server***
-
-      Please, execute the following commands in your terminal:
- 
-      Navigate into the IB Server directory:
+ - Navigate into the IB Server directory:
 	  
     `$ cd pathToClonedGitRepo/`
     	  
-    Set environment variables:
+ - Set environment variables:
     	 
     `$ cp .env.example .env`
      
-    Install dependencies:
+ - Install dependencies:
 	
     `$ npm install`
 	
-    Finally, run the IB Server
+ - Finally, run the IB Server
 	
     `$ npm run start`
 
-    API documentation:
+# API documentation
    
-    To generate API documentation run next command:
+  To generate API documentation run next command:
    
-    `$ npm run apidoc`
+   `$ npm run apidoc`
 
-    Documentation files will be generated inside /apidoc directory.
+  Documentation files will be generated inside `/docs` directory.
+    
+# Code style
+    
+  For code style eslint is used. 
+  You can extend default settings by editing *.eslintrc.js* file.
+  You can run ESLint in project’s root directory like this:
+  
+  `$ npm run eslint`
+    
+  For full documentation please read <a href="https://eslint.org/docs">official documentation</a>
+    
 	 
 That's it. You should be ready to start. Please report an issue if you have any troubles!
